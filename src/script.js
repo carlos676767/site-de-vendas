@@ -95,11 +95,20 @@ const darkMode = () => {
     h1.style.color = cores.azulbebe
   }
 
+  const textoConteudo = document.getElementById("texto-conteudo")
+  const textoBlack = () => {
+    textoConteudo.style.color = cores.white
+  }
+
+  const textoWhite = () => {
+    textoConteudo.style.color = cores.azulbebe
+  }
   select.addEventListener("change", () => {
     if (black.selected) {
       bodyBlack();
       menuPrincipalBlack();
       h1Black()
+      textoBlack()
       localStorage.setItem("darkmode", cores.black);
       localStorage.setItem("selelcionar", black.selected);
     } else if (white.selected) {
@@ -108,6 +117,7 @@ const darkMode = () => {
       iBlack();
       aboutEblackWhite()
       h1White()
+      textoWhite()
       localStorage.setItem("darkmode", cores.white);
       localStorage.setItem("selelcionar", white.selected);
     }
@@ -129,6 +139,7 @@ const darkMode = () => {
       menuPrincipalBlack();
       blackRecebeValorSelecionado();
       h1Black()
+      textoBlack()
     } else if (salvarValor === cores.white) {
       bodyWhite();
       menuPrincipalWhite();
@@ -136,6 +147,7 @@ const darkMode = () => {
       whiteRecebeValorSelecionado();
       aboutEblackWhite()
       h1White()
+      textoWhite()
     }
   };
   salvarDarkMode();
