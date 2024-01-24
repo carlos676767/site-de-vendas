@@ -21,6 +21,7 @@ const cores = {
 
 
 
+
 const produtos = document.getElementById(`produtos`);
 produtos.addEventListener("click", () => {
   const produtosRecebeClasssesblack = () => {
@@ -84,10 +85,16 @@ const darkMode = () => {
     produtos.style.color = cores.black
   }
 
+  const h1 = document.querySelector("h1")
+  const h1Black = () => {
+    h1.style.color = cores.azulClaro
+  }
+
   select.addEventListener("change", () => {
     if (black.selected) {
       bodyBlack();
       menuPrincipalBlack();
+      h1Black()
       localStorage.setItem("darkmode", cores.black);
       localStorage.setItem("selelcionar", black.selected);
     } else if (white.selected) {
@@ -115,6 +122,7 @@ const darkMode = () => {
       bodyBlack();
       menuPrincipalBlack();
       blackRecebeValorSelecionado();
+      h1Black()
     } else if (salvarValor === cores.white) {
       bodyWhite();
       menuPrincipalWhite();
