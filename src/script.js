@@ -17,6 +17,7 @@ const cores = {
   azulClaro: "#F0F6FF",
   roxoClaro: "#414558",
   azulbebe: "#394E6A",
+  azulForte: "#0069E0",
 }
 
 
@@ -91,6 +92,15 @@ const darkMode = () => {
     h1.style.color = cores.azulClaro
   }
 
+
+  const explore = document.getElementById("explore")
+  const exploreBlack = () => {
+    explore.style.backgroundColor = cores.rosa;
+  };
+
+  const exploreWhite = () => {
+    explore.style.backgroundColor = cores.azulForte
+  }
   const h1White = () => {
     h1.style.color = cores.azulbebe
   }
@@ -109,15 +119,17 @@ const darkMode = () => {
       menuPrincipalBlack();
       h1Black()
       textoBlack()
+      exploreBlack()
       localStorage.setItem("darkmode", cores.black);
       localStorage.setItem("selelcionar", black.selected);
     } else if (white.selected) {
       bodyWhite();
       menuPrincipalWhite();
       iBlack();
-      aboutEblackWhite()
-      h1White()
-      textoWhite()
+      aboutEblackWhite();
+      h1White();
+      textoWhite();
+      exploreWhite()
       localStorage.setItem("darkmode", cores.white);
       localStorage.setItem("selelcionar", white.selected);
     }
@@ -138,16 +150,18 @@ const darkMode = () => {
       bodyBlack();
       menuPrincipalBlack();
       blackRecebeValorSelecionado();
-      h1Black()
-      textoBlack()
+      h1Black();
+      textoBlack();
+      exploreBlack();
     } else if (salvarValor === cores.white) {
       bodyWhite();
       menuPrincipalWhite();
       iBlack();
       whiteRecebeValorSelecionado();
-      aboutEblackWhite()
-      h1White()
-      textoWhite()
+      aboutEblackWhite();
+      h1White();
+      textoWhite();
+      exploreWhite()
     }
   };
   salvarDarkMode();
