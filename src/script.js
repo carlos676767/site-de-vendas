@@ -16,6 +16,7 @@ const cores = {
   white: "#fff",
   azulClaro: "#F0F6FF",
   roxoClaro: "#414558",
+  azulbebe: "#394E6A",
 }
 
 
@@ -90,6 +91,10 @@ const darkMode = () => {
     h1.style.color = cores.azulClaro
   }
 
+  const h1White = () => {
+    h1.style.color = cores.azulbebe
+  }
+
   select.addEventListener("change", () => {
     if (black.selected) {
       bodyBlack();
@@ -102,6 +107,7 @@ const darkMode = () => {
       menuPrincipalWhite();
       iBlack();
       aboutEblackWhite()
+      h1White()
       localStorage.setItem("darkmode", cores.white);
       localStorage.setItem("selelcionar", white.selected);
     }
@@ -129,6 +135,7 @@ const darkMode = () => {
       iBlack();
       whiteRecebeValorSelecionado();
       aboutEblackWhite()
+      h1White()
     }
   };
   salvarDarkMode();
