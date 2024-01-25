@@ -122,6 +122,16 @@ const darkMode = () => {
   const textoWhite = () => {
     textoConteudo.style.color = cores.azulbebe
   }
+
+  const textoProdutos = document.getElementById("texto-produtos")
+  const produtosBlack = () => {
+    textoProdutos.style.color = cores.white
+  }
+
+  const textoWhiteProdutos = () => {
+    textoProdutos.style.color = cores.azulbebe
+  }
+
   select.addEventListener("change", () => {
     if (black.selected) {
       bodyBlack();
@@ -130,6 +140,7 @@ const darkMode = () => {
       textoBlack()
       exploreBlack()
       dialogBlack()
+      produtosBlack()
       localStorage.setItem("darkmode", cores.black);
       localStorage.setItem("selelcionar", black.selected);
     } else if (white.selected) {
@@ -139,8 +150,9 @@ const darkMode = () => {
       aboutEblackWhite();
       h1White();
       textoWhite();
-      exploreWhite()
-      dialogWhite()
+      exploreWhite();
+      dialogWhite();
+      textoWhiteProdutos();
       localStorage.setItem("darkmode", cores.white);
       localStorage.setItem("selelcionar", white.selected);
     }
@@ -165,6 +177,7 @@ const darkMode = () => {
       textoBlack();
       exploreBlack();
       dialogBlack();
+      produtosBlack()
     } else if (salvarValor === cores.white) {
       bodyWhite();
       menuPrincipalWhite();
@@ -173,8 +186,9 @@ const darkMode = () => {
       aboutEblackWhite();
       h1White();
       textoWhite();
-      exploreWhite()
-      dialogWhite()
+      exploreWhite();
+      dialogWhite();
+      textoWhiteProdutos();
     }
   };
   salvarDarkMode();

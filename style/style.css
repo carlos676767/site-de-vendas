@@ -250,6 +250,19 @@ i{
     color: var(--cor-um-pouco-branca);
   }
 
+ 
+  #texto-produtos{
+    font-size: 20px;
+    margin-right: 800px;
+  }
+
+  .produtoss{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
   @media (max-width: 1194px) {
       .header-1 {
           display: flex;
@@ -308,6 +321,13 @@ i{
      h1{
       font-size: 30px;
      }
+
+    #texto-produtos{
+      display: grid;
+      place-items: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   
