@@ -68,6 +68,7 @@ select {
     background-color: var(--cor-mais-preta);
     padding: 8px;
     width: 100%;
+    z-index: 1;
 }
 
 ul {
@@ -103,21 +104,20 @@ li, .navs{
     background-color: var(--toastify-color-dark);
     padding: 10px;
     color: var(--toastify-spinner-color-empty-area);
+    z-index: 1;
   }
   
   .menu-principal li {
     margin: 0 10px; 
   }
   
-  .menu-principal #mulher {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  #mulher {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
+    margin-left: -25px;
   }
 
 
@@ -216,18 +216,20 @@ i{
     font-size: 60px;
   }
 
-  .imagem, img{
+  .imagem img{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 400px;
     border-radius: 10px;
     object-fit: cover;
+    overflow: hidden;
   }
 
   .imagem, .conteudo{
     margin-left: 30px;
   }
+  
 
   #explore{
     padding: 10px;
@@ -256,8 +258,10 @@ i{
     margin-right: 800px;
   }
 
+
   .produtoss{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
