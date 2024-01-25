@@ -18,7 +18,9 @@ const cores = {
   roxoClaro: "#414558",
   azulbebe: "#394E6A",
   azulForte: "#0069E0",
+  rgba: "rgba(0, 0, 0, 0.8)",
 }
+
 
 
 
@@ -92,6 +94,13 @@ const darkMode = () => {
     h1.style.color = cores.azulClaro
   }
 
+  const dialogBlack = () => {
+    dialog.style.backgroundColor = cores.rgba
+  }
+
+  const dialogWhite = () => {
+    dialog.style.backgroundColor = cores.azulbebe
+  }
 
   const explore = document.getElementById("explore")
   const exploreBlack = () => {
@@ -120,6 +129,7 @@ const darkMode = () => {
       h1Black()
       textoBlack()
       exploreBlack()
+      dialogBlack()
       localStorage.setItem("darkmode", cores.black);
       localStorage.setItem("selelcionar", black.selected);
     } else if (white.selected) {
@@ -130,6 +140,7 @@ const darkMode = () => {
       h1White();
       textoWhite();
       exploreWhite()
+      dialogWhite()
       localStorage.setItem("darkmode", cores.white);
       localStorage.setItem("selelcionar", white.selected);
     }
@@ -153,6 +164,7 @@ const darkMode = () => {
       h1Black();
       textoBlack();
       exploreBlack();
+      dialogBlack();
     } else if (salvarValor === cores.white) {
       bodyWhite();
       menuPrincipalWhite();
@@ -162,6 +174,7 @@ const darkMode = () => {
       h1White();
       textoWhite();
       exploreWhite()
+      dialogWhite()
     }
   };
   salvarDarkMode();
@@ -169,7 +182,5 @@ const darkMode = () => {
 
 
 darkMode();
-const des = document.getElementById(`des`).addEventListener(`click`, function() {
-  localStorage.clear()
-})
+
 
