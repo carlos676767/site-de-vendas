@@ -5,7 +5,6 @@
 }
 
 
-
 :root {
     --toastify-color-light: #fff;
     --toastify-color-dark: #121212;
@@ -253,13 +252,42 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
     color: var(--cor-um-pouco-branca);
   }
 
- .produtoss{
+ .section{
   display: flex;
   align-items: center;
   justify-content: center;
-  
  }
   
+ 
+ .imagens {
+   border-radius: 20px;
+   background-color: var(--cor-um-pouco-branca);
+   padding: 10px;
+   box-shadow: -3px 3px 25px -4px rgba(0, 0, 0, 0.6);
+   -webkit-box-shadow: -3px 3px 25px -4px rgba(0, 0, 0, 0.6);
+   -moz-box-shadow: -3px 3px 25px -4px rgba(0, 0, 0, 0.6);
+   object-fit: cover;
+   cursor: pointer;
+   width: 200px;
+   margin-right: 2px;
+ }
+
+ .imagens{
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.imagens:hover{
+  -webkit-transform: scale(1.5);
+  transform: scale(1.2);
+}
+
+
+#texto-produto{
+  font-size: 300px;
+}
+
+
 
   @media (max-width: 1194px) {
       .header-1 {
@@ -326,6 +354,18 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
       margin-left: auto;
       margin-right: auto;
     }
+
+ 
+    .imagens {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
   }
 
   

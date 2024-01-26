@@ -19,7 +19,9 @@ const cores = {
   azulbebe: "#394E6A",
   azulForte: "#0069E0",
   rgba: "rgba(0, 0, 0, 0.8)",
+  
 }
+
 
 
 
@@ -132,6 +134,19 @@ const darkMode = () => {
     textoProdutos.style.color = cores.azulbebe
   }
 
+  const imagens = document.querySelectorAll(".imagens")
+  const imagensColorBlack = () => {
+    imagens.forEach(element => {
+      element.style.backgroundColor = cores.black
+    });
+  }
+
+  const imagensColorWhite = () => {
+    imagens.forEach(element => {
+      element.style.backgroundColor = cores.white
+    });
+  }
+
   select.addEventListener("change", () => {
     if (black.selected) {
       bodyBlack();
@@ -141,6 +156,7 @@ const darkMode = () => {
       exploreBlack()
       dialogBlack()
       produtosBlack()
+      imagensColorBlack()
       localStorage.setItem("darkmode", cores.black);
       localStorage.setItem("selelcionar", black.selected);
     } else if (white.selected) {
@@ -153,6 +169,7 @@ const darkMode = () => {
       exploreWhite();
       dialogWhite();
       textoWhiteProdutos();
+      imagensColorWhite()
       localStorage.setItem("darkmode", cores.white);
       localStorage.setItem("selelcionar", white.selected);
     }
@@ -178,6 +195,7 @@ const darkMode = () => {
       exploreBlack();
       dialogBlack();
       produtosBlack()
+      imagensColorBlack()
     } else if (salvarValor === cores.white) {
       bodyWhite();
       menuPrincipalWhite();
@@ -189,6 +207,7 @@ const darkMode = () => {
       exploreWhite();
       dialogWhite();
       textoWhiteProdutos();
+      imagensColorWhite()
     }
   };
   salvarDarkMode();
