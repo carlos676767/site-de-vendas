@@ -242,12 +242,7 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
     background-color: var(--rosa);
     color: var(--cor-um-pouco-branca);
   }
-
-  #explore:hover{
-    background-color: #FFB6C1;
-  }
-
-
+  
   p{
     color: var(--cor-um-pouco-branca);
   }
@@ -256,8 +251,10 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
   display: flex;
   align-items: center;
   justify-content: center;
- }
+  margin-top: 50px;
   
+ }
+
  
  .imagens {
    border-radius: 20px;
@@ -276,6 +273,18 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
   transition: all 0.2s;
   cursor: pointer;
 }
+
+.textos{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  box-shadow: -3px 3px 25px -4px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: -3px 3px 25px -4px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: -3px 3px 25px -4px rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  border-radius: 20px;
+}
+
 
 .imagens:hover{
   -webkit-transform: scale(1.5);
@@ -372,6 +381,7 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
       margin-left: auto;
       margin-right: auto;
     }
+
   }
 
   

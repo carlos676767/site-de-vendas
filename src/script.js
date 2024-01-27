@@ -147,6 +147,19 @@ const darkMode = () => {
     });
   }
 
+  const textos = document.querySelectorAll(".textos")
+  const textoolBlack = () => {
+    textos.forEach(element => {
+      element.style.color = cores.white
+    })
+  }
+
+  const textoWhiteol = () => {
+    textos.forEach(element => {
+      element.style.color = cores.azulbebe
+    })
+  }
+
   select.addEventListener("change", () => {
     if (black.selected) {
       bodyBlack();
@@ -157,6 +170,7 @@ const darkMode = () => {
       dialogBlack()
       produtosBlack()
       imagensColorBlack()
+      textoolBlack()
       localStorage.setItem("darkmode", cores.black);
       localStorage.setItem("selelcionar", black.selected);
     } else if (white.selected) {
@@ -170,6 +184,7 @@ const darkMode = () => {
       dialogWhite();
       textoWhiteProdutos();
       imagensColorWhite()
+      textoWhiteol()
       localStorage.setItem("darkmode", cores.white);
       localStorage.setItem("selelcionar", white.selected);
     }
@@ -186,6 +201,9 @@ const darkMode = () => {
       white.selected = valorSelecionado
     }
 
+  
+
+
     if (salvarValor === cores.black) {
       bodyBlack();
       menuPrincipalBlack();
@@ -196,6 +214,7 @@ const darkMode = () => {
       dialogBlack();
       produtosBlack()
       imagensColorBlack()
+      textoolBlack()
     } else if (salvarValor === cores.white) {
       bodyWhite();
       menuPrincipalWhite();
@@ -208,12 +227,10 @@ const darkMode = () => {
       dialogWhite();
       textoWhiteProdutos();
       imagensColorWhite()
+      textoWhiteol
     }
   };
   salvarDarkMode();
 };
-
-
 darkMode();
-
 
