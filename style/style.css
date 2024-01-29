@@ -331,8 +331,30 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
 .texto-about{
   font-size: 45px;
   color: var(--cor-um-pouco-branca);
-  
 }
+
+
+
+
+
+#loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin-left: 600px;
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 
 
 .texto-informacoes{
   font-size: 12px;

@@ -172,6 +172,14 @@ const darkMode = () => {
     botaoBoasVindas.style.backgroundColor = cores.rosa
   }
 
+  const textoInformacoes = document.getElementById("texto-informacoes")
+  const textoInformacoesBlack = () => {
+    textoInformacoes.style.color = cores.black
+  }
+
+  const textoInformacoesWhite = () => {
+    textoInformacoes.style.color = cores.white
+  }
 
   select.addEventListener("change", () => {
     if (black.selected) {
@@ -186,6 +194,7 @@ const darkMode = () => {
       textoolBlack();
       textoAboutBlack()
       botaoBoasVindasBlack()
+      textoInformacoesWhite()
       localStorage.setItem("darkmode", cores.black);
       localStorage.setItem("selelcionar", black.selected);
     } else if (white.selected) {
@@ -202,6 +211,7 @@ const darkMode = () => {
       textoWhiteol();
       textoAboutWhite()
       botaoBoasVindasWhite()
+      textoInformacoesBlack()
       localStorage.setItem("darkmode", cores.white);
       localStorage.setItem("selelcionar", white.selected);
     }
@@ -231,6 +241,7 @@ const darkMode = () => {
       textoolBlack();
       textoAboutBlack();
       botaoBoasVindasBlack()
+      textoInformacoesWhite()
     } else if (salvarValor === cores.white) {
       bodyWhite();
       menuPrincipalWhite();
@@ -246,6 +257,8 @@ const darkMode = () => {
       textoWhiteol();
       textoAboutWhite()
       botaoBoasVindasWhite()
+      textoInformacoesBlack()
+
     }
   };
   salvarDarkMode();
@@ -253,23 +266,33 @@ const darkMode = () => {
 darkMode();
 
 
+const loader = document.getElementById("loader")
+
+const loaderBlock = () => {
+  loader.style.display = `block`
+}
+
+const loaderNone = () => {
+  loader.style.display = `none`
+}
 
 const esconderDivs =  () => {
   const conteudoDivPrincipal = document.querySelector(".conteudo").style.display = `none`
   const setcion = document.querySelector(".section").style.display = `none`
   const divImg = document.querySelector(".imagem").style.display = `none`
+ 
+}
+
+const mostrarDivSobre = () => {
   const divSobre = document.querySelector(".minha").style.display = `block`
 }
 
 
-
-
-
 about.addEventListener("click", () => {
   esconderDivs()
+  loaderBlock()
+  setInterval(() => {
+    loaderNone()
+    mostrarDivSobre()
+  }, 1500);
 })
-
-
-
- 
-
