@@ -312,6 +312,7 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
   flex-direction: row;
   justify-content: center;
   text-align: center;
+  display: none;
 }
 .livro1{
   width: 400px;
@@ -330,6 +331,7 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
 .texto-about{
   font-size: 45px;
   color: var(--cor-um-pouco-branca);
+  
 }
 
 .texto-informacoes{
