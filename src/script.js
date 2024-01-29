@@ -1,13 +1,12 @@
 const mulherImagem = document.getElementById("mulher");
-const dialog = document.querySelector("dialog")
+const dialog = document.querySelector("dialog");
 mulherImagem.addEventListener("click", () => {
-    dialog.style.display = "block"
+  dialog.style.display = "block";
 });
 
 setTimeout(() => {
-    dialog.style.display = "none"
+  dialog.style.display = "none";
 }, 10000);
-
 
 const cores = {
   black: "#272935",
@@ -19,14 +18,7 @@ const cores = {
   azulbebe: "#394E6A",
   azulForte: "#0069E0",
   rgba: "rgba(0, 0, 0, 0.8)",
-  
-}
-
-
-
-
-
-
+};
 
 const produtos = document.getElementById(`produtos`);
 produtos.addEventListener("click", () => {
@@ -54,7 +46,6 @@ about.addEventListener("click", () => {
 
   aboutRecebeClasseBlack();
 });
-
 
 const darkMode = () => {
   const bodyBlack = () => {
@@ -85,92 +76,92 @@ const darkMode = () => {
   };
 
   const aboutEblackWhite = () => {
-    about.style.backgroundColor = cores.azulClaro
-    produtos.style.backgroundColor = cores.azulClaro
-    about.style.color = cores.black
-    produtos.style.color = cores.black
-  }
+    about.style.backgroundColor = cores.azulClaro;
+    produtos.style.backgroundColor = cores.azulClaro;
+    about.style.color = cores.black;
+    produtos.style.color = cores.black;
+  };
 
-  const h1 = document.querySelector("h1")
+  const h1 = document.querySelector("h1");
   const h1Black = () => {
-    h1.style.color = cores.azulClaro
-  }
+    h1.style.color = cores.azulClaro;
+  };
 
   const dialogBlack = () => {
-    dialog.style.backgroundColor = cores.rgba
-  }
+    dialog.style.backgroundColor = cores.rgba;
+  };
 
   const dialogWhite = () => {
-    dialog.style.backgroundColor = cores.azulbebe
-  }
+    dialog.style.backgroundColor = cores.azulbebe;
+  };
 
-  const explore = document.getElementById("explore")
+  const explore = document.getElementById("explore");
   const exploreBlack = () => {
     explore.style.backgroundColor = cores.rosa;
   };
 
   const exploreWhite = () => {
-    explore.style.backgroundColor = cores.azulForte
-  }
+    explore.style.backgroundColor = cores.azulForte;
+  };
   const h1White = () => {
-    h1.style.color = cores.azulbebe
-  }
+    h1.style.color = cores.azulbebe;
+  };
 
-  const textoConteudo = document.getElementById("texto-conteudo")
+  const textoConteudo = document.getElementById("texto-conteudo");
   const textoBlack = () => {
-    textoConteudo.style.color = cores.white
-  }
+    textoConteudo.style.color = cores.white;
+  };
 
   const textoWhite = () => {
-    textoConteudo.style.color = cores.azulbebe
-  }
+    textoConteudo.style.color = cores.azulbebe;
+  };
 
-  const textoProdutos = document.getElementById("texto-produtos")
+  const textoProdutos = document.getElementById("texto-produtos");
   const produtosBlack = () => {
-    textoProdutos.style.color = cores.white
-  }
+    textoProdutos.style.color = cores.white;
+  };
 
   const textoWhiteProdutos = () => {
-    textoProdutos.style.color = cores.azulbebe
-  }
+    textoProdutos.style.color = cores.azulbebe;
+  };
 
-  const imagens = document.querySelectorAll(".imagens")
+  const imagens = document.querySelectorAll(".imagens");
   const imagensColorBlack = () => {
-    imagens.forEach(element => {
-      element.style.backgroundColor = cores.black
+    imagens.forEach((element) => {
+      element.style.backgroundColor = cores.black;
     });
-  }
+  };
 
   const imagensColorWhite = () => {
-    imagens.forEach(element => {
-      element.style.backgroundColor = cores.white
+    imagens.forEach((element) => {
+      element.style.backgroundColor = cores.white;
     });
-  }
+  };
 
-  const textos = document.querySelectorAll(".textos")
+  const textos = document.querySelectorAll(".textos");
   const textoolBlack = () => {
-    textos.forEach(element => {
-      element.style.color = cores.white
-    })
-  }
+    textos.forEach((element) => {
+      element.style.color = cores.white;
+    });
+  };
 
   const textoWhiteol = () => {
-    textos.forEach(element => {
-      element.style.color = cores.azulbebe
-    })
-  }
+    textos.forEach((element) => {
+      element.style.color = cores.azulbebe;
+    });
+  };
 
   select.addEventListener("change", () => {
     if (black.selected) {
       bodyBlack();
       menuPrincipalBlack();
-      h1Black()
-      textoBlack()
-      exploreBlack()
-      dialogBlack()
-      produtosBlack()
-      imagensColorBlack()
-      textoolBlack()
+      h1Black();
+      textoBlack();
+      exploreBlack();
+      dialogBlack();
+      produtosBlack();
+      imagensColorBlack();
+      textoolBlack();
       localStorage.setItem("darkmode", cores.black);
       localStorage.setItem("selelcionar", black.selected);
     } else if (white.selected) {
@@ -183,8 +174,8 @@ const darkMode = () => {
       exploreWhite();
       dialogWhite();
       textoWhiteProdutos();
-      imagensColorWhite()
-      textoWhiteol()
+      imagensColorWhite();
+      textoWhiteol();
       localStorage.setItem("darkmode", cores.white);
       localStorage.setItem("selelcionar", white.selected);
     }
@@ -192,17 +183,14 @@ const darkMode = () => {
 
   const salvarDarkMode = () => {
     const salvarValor = localStorage.getItem("darkmode");
-    const valorSelecionado = localStorage.getItem("selelcionar")
+    const valorSelecionado = localStorage.getItem("selelcionar");
     const blackRecebeValorSelecionado = () => {
-      black.selected = valorSelecionado
-    }
+      black.selected = valorSelecionado;
+    };
 
     const whiteRecebeValorSelecionado = () => {
-      white.selected = valorSelecionado
-    }
-
-  
-
+      white.selected = valorSelecionado;
+    };
 
     if (salvarValor === cores.black) {
       bodyBlack();
@@ -212,9 +200,9 @@ const darkMode = () => {
       textoBlack();
       exploreBlack();
       dialogBlack();
-      produtosBlack()
-      imagensColorBlack()
-      textoolBlack()
+      produtosBlack();
+      imagensColorBlack();
+      textoolBlack();
     } else if (salvarValor === cores.white) {
       bodyWhite();
       menuPrincipalWhite();
@@ -226,20 +214,17 @@ const darkMode = () => {
       exploreWhite();
       dialogWhite();
       textoWhiteProdutos();
-      imagensColorWhite()
-      textoWhiteol()
+      imagensColorWhite();
+      textoWhiteol();
     }
   };
   salvarDarkMode();
 };
 darkMode();
 
-
-const livro1 = document.querySelectorAll(".imagens")[0]
-const section = document.querySelector(".section")
+const livro1 = document.querySelectorAll(".imagens")[0];
+const section = document.querySelector(".section");
 console.log(section);
 livro1.addEventListener(`click`, function (params) {
-  section.style.display = `none`
-})
-
-
+  section.style.display = `none`;
+});
