@@ -227,10 +227,19 @@ const darkMode = () => {
       dialogWhite();
       textoWhiteProdutos();
       imagensColorWhite()
-      textoWhiteol
+      textoWhiteol()
     }
   };
   salvarDarkMode();
 };
 darkMode();
+
+
+const livro1 = document.querySelectorAll(".imagens")[0]
+const section = document.querySelector(".section")
+console.log(section);
+livro1.addEventListener(`click`, function (params) {
+  section.style.display = `none`
+})
+
 

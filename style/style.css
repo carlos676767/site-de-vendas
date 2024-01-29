@@ -252,9 +252,9 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
   align-items: center;
   justify-content: center;
   margin-top: 50px;
-  
  }
 
+ 
  
  .imagens {
    border-radius: 20px;
@@ -292,11 +292,24 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
 }
 
 
-#texto-produto{
-  font-size: 300px;
+#texto-produtos{
+  font-size: 30px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
+.produtos1{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.livro1{
+  width: 400px;
+  border-radius: 20px;
+}
 
   @media (max-width: 1194px) {
       .header-1 {
@@ -360,9 +373,12 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
     #texto-produtos{
       display: grid;
       place-items: center;
+      text-align: center;
       margin-left: auto;
       margin-right: auto;
+      font-size: auto;
     }
+
 
  
     .imagens {
