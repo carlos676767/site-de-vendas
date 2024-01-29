@@ -18,7 +18,9 @@ const cores = {
   azulbebe: "#394E6A",
   azulForte: "#0069E0",
   rgba: "rgba(0, 0, 0, 0.8)",
+  azulMaisForte: "#057AFF",
 };
+
 
 const produtos = document.getElementById(`produtos`);
 produtos.addEventListener("click", () => {
@@ -151,6 +153,22 @@ const darkMode = () => {
     });
   };
 
+  const textoAbout = document.getElementById("texto-about")
+  console.log(textoAbout);
+  const textoAboutBlack = () => {
+    textoAbout.style.color = cores.white
+  }
+
+  const textoAboutWhite = () => {
+    textoAbout.style.color = cores.azulbebe
+  }
+
+  const botaoBoasVindas = document.querySelector(".botao-boas-vindas")
+  const botaoBoasVindasBlack = () => {
+    botaoBoasVindas.style.backgroundColor = cores.azulMaisForte
+  }
+
+
   select.addEventListener("change", () => {
     if (black.selected) {
       bodyBlack();
@@ -162,6 +180,8 @@ const darkMode = () => {
       produtosBlack();
       imagensColorBlack();
       textoolBlack();
+      textoAboutBlack()
+      
       localStorage.setItem("darkmode", cores.black);
       localStorage.setItem("selelcionar", black.selected);
     } else if (white.selected) {
@@ -176,6 +196,8 @@ const darkMode = () => {
       textoWhiteProdutos();
       imagensColorWhite();
       textoWhiteol();
+      textoAboutWhite()
+      botaoBoasVindasBlack()
       localStorage.setItem("darkmode", cores.white);
       localStorage.setItem("selelcionar", white.selected);
     }
@@ -203,6 +225,7 @@ const darkMode = () => {
       produtosBlack();
       imagensColorBlack();
       textoolBlack();
+      textoAboutBlack()
     } else if (salvarValor === cores.white) {
       bodyWhite();
       menuPrincipalWhite();
@@ -216,15 +239,43 @@ const darkMode = () => {
       textoWhiteProdutos();
       imagensColorWhite();
       textoWhiteol();
+      textoAboutWhite()
+      botaoBoasVindasBlack()
     }
   };
   salvarDarkMode();
 };
 darkMode();
 
-const livro1 = document.querySelectorAll(".imagens")[0];
-const section = document.querySelector(".section");
-console.log(section);
-livro1.addEventListener(`click`, function (params) {
-  section.style.display = `none`;
-});
+
+
+const esconderDivs =  () => {
+  const conteudoDivPrincipal = document.querySelector(".conteudo").style.display = `none`
+  const setcion = document.querySelector(".section").style.display = `none`
+  const divImg = document.querySelector(".imagem").style.display = `none`
+}
+const divPrincipal = document.querySelector(".minha")
+const mostrarDivComConteudoAbout = () => {
+  divPrincipal.innerHTML = `
+  <div class="informacoes-boas">
+  <h2 class="texto-about" id="texto-about">
+    We love
+    <button class="botao-boas-vindas">
+      comfy
+    </button>
+    <p class="texto-informacoes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia iste, sunt vel maxime veniam unde sapiente iusto ipsum eveniet deserunt ducimus doloribus. Facere quaerat enim commodi, quod ipsa cumque?</p>
+  </h2>
+ </div>`
+};
+
+
+
+about.addEventListener("click", () => {
+  mostrarDivComConteudoAbout()
+  esconderDivs()
+})
+
+
+
+ 
+

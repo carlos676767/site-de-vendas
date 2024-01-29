@@ -306,9 +306,34 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
 }
 
 
+.minha{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
 .livro1{
   width: 400px;
   border-radius: 20px;
+}
+
+.botao-boas-vindas{
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 30px;
+  border: none;
+  letter-spacing: 8px;
+  background-color: var(--rosa);
+}
+
+.texto-about{
+  font-size: 45px;
+  color: var(--cor-um-pouco-branca);
+}
+
+.texto-informacoes{
+  font-size: 12px;
 }
 
   @media (max-width: 1194px) {
@@ -318,6 +343,9 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
           text-align: center;
       }
 
+      .texto-about{
+       font-size: auto;
+      }
       .list-1 {
           display: flex;
           justify-content: center;
@@ -325,6 +353,13 @@ box-shadow: 1px 3px 16px 0px rgba(0,0,0,0.75);
           padding: 0;
           margin: 0;
           list-style-type: none;
+      }
+
+      .botao-boas-vinda{
+        border-radius: auto;
+        padding: auto;
+        font-size: auto;
+
       }
       .dialog {
         display: flex;
