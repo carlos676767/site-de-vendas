@@ -266,33 +266,53 @@ const darkMode = () => {
 darkMode();
 
 
-const loader = document.getElementById("loader")
 
-const loaderBlock = () => {
-  loader.style.display = `block`
-}
-
-const loaderNone = () => {
-  loader.style.display = `none`
-}
-
-const esconderDivs =  () => {
-  const conteudoDivPrincipal = document.querySelector(".conteudo").style.display = `none`
-  const setcion = document.querySelector(".section").style.display = `none`
-  const divImg = document.querySelector(".imagem").style.display = `none`
- 
-}
-
-const mostrarDivSobre = () => {
-  const divSobre = document.querySelector(".minha").style.display = `block`
-}
+const divSobre = document.getElementById("minha")
+const conteudoDivPrincipal = document.querySelector(".conteudo")
+const setcion = document.querySelector(".section")
+const divImg = document.querySelector(".imagem")
 
 
 about.addEventListener("click", () => {
-  esconderDivs()
-  loaderBlock()
+  const mostrarDivSobre = () => {
+    divSobre.style.display = `block`;
+  };
+  const esconderDivs = () => {
+    conteudoDivPrincipal.style.display = `none`;
+    setcion.style.display = `none`;
+    divImg.style.display = `none`;
+  };
+
+  const loader = document.getElementById("loader");
+  const loaderBlock = () => {
+    loader.style.display = `block`;
+  };
+  const loaderNone = () => {
+    loader.style.display = `none`;
+  };
+
+  esconderDivs();
+  loaderBlock();
   setInterval(() => {
-    loaderNone()
-    mostrarDivSobre()
-  }, 1500);
-})
+    loaderNone();
+    mostrarDivSobre();
+  }, 3000);
+});
+
+const home = document.getElementById("home")
+home.addEventListener("click", () => {
+  const mostrarDivSobre = () => {
+    conteudoDivPrincipal.style.display = `block`;
+    setcion.style.display = `block`;
+    divImg.style.display = `block`;
+  };
+
+
+  const ocultar = () => {
+    divSobre.style.display = `none`
+  }
+  mostrarDivSobre();
+  ocultar()
+});
+
+

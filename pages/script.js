@@ -9,3 +9,4 @@ input.addEventListener(`input`, function() {
     console.log(test[i].textContent);
   }
 })
+
