@@ -308,8 +308,10 @@ home.addEventListener("click", () => {
   };
 
 
+
+
   const ocultar = () => {
-    divSobre.style.display = `none`
+    divSobre.display = `none`
   }
   mostrarDivSobre();
   ocultar()
